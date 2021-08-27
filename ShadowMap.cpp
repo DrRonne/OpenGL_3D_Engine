@@ -8,7 +8,7 @@ ShadowMap::ShadowMap()
 	shadowMap = 0;
 }
 
-bool ShadowMap::Init(unsigned int width, unsigned int height)
+bool ShadowMap::Init(GLuint width, GLuint height)
 {
 	shadowWidth = width; shadowHeight = height;
 
