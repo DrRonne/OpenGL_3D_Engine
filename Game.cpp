@@ -18,11 +18,17 @@ void Game::Init()
 
 	// Init lightingmanager
 	LightingManager* lightManager = new LightingManager();
-	DirectionalLight* mainLight = new DirectionalLight(2048, 2048,
+	DirectionalLight* mainLight = new DirectionalLight(4096, 4096,
 												  1.0f, 1.0f, 1.0f,
 												  0.1f, 0.3f,
 												  0.0f, -15.0f, -10.0f);
 	lightManager->SetMainLight(*mainLight);
+	/*lightManager->AddPointLight(PointLight(1024, 1024,
+		0.1f, 100.0f,
+		0.0f, 0.0f, 1.0f,
+		0.0f, 0.4f,
+		2.0f, 2.0f, 0.0f,
+		0.3f, 0.01f, 0.01f));*/
 
 	// Init skybox
 	std::vector<std::string> skyboxFaces;

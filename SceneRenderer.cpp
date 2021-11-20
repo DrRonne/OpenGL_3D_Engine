@@ -76,7 +76,7 @@ void SceneRenderer::Execute()
 		OmniShadowMapPass(spotlights[i]);
 	}
 
-	glm::mat4 projection = glm::perspective(glm::radians(60.0f), (GLfloat)mainWindow->getBufferWidth() / mainWindow->getBufferHeight(), 0.1f, 100.0f);
+	glm::mat4 projection = glm::perspective(glm::radians(60.0f), (GLfloat)mainWindow->getBufferWidth() / mainWindow->getBufferHeight(), 0.1f, 1000.0f);
 
 	RenderPass(projection, camera->calculateViewMatrix());
 
@@ -89,7 +89,6 @@ void SceneRenderer::RenderScene()
 {
 	for (size_t i = 0; i < components.size(); i++)
 	{
-		//printf("model\n");
 		RenderComponent* component = components[i];
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(component->GetModelMatrix()));
 		component->GetMaterial().UseMaterial(uniformSpecularIntensity, uniformShininess);

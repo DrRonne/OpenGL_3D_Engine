@@ -18,6 +18,8 @@ public:
 	void LoadModel(const std::string& fileName);
 	void RenderModel();
 	void ClearModel();
+	void addMesh(Mesh* mesh);
+	void addTexture(Texture* texture);
 
 	~Model();
 

@@ -58,6 +58,17 @@ void Model::ClearModel()
 	}
 }
 
+void Model::addMesh(Mesh * mesh)
+{
+	meshList.push_back(mesh);
+	meshToTex.push_back(0);
+}
+
+void Model::addTexture(Texture * texture)
+{
+	textureList.push_back(texture);
+}
+
 
 Model::~Model()
 {
